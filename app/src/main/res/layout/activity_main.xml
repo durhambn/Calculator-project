@@ -15,11 +15,12 @@
     android:layout_weight="2">
 
     <TextView
+        android:id="@+id/viewCalc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter Numbers"
-        android:textSize="34sp"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true"
+        android:hint="Enter Numbers"
+        android:textSize="34sp" />
 
 </RelativeLayout>
 
@@ -34,28 +35,28 @@
 
         <!--Row 1, column 1-->
         <androidx.cardview.widget.CardView
+            android:id="@+id/clear"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:layout_marginBottom="10dp"
+            android:layout_columnWeight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            app:cardElevation="8dp"
+            android:layout_marginBottom="10dp"
             app:cardCornerRadius="8dp"
-            >
+            app:cardElevation="8dp">
 
             <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="R1c1"
+                    android:text="C"
                     android:textAlignment="center"
                     android:textSize="16sp">
 
@@ -67,28 +68,28 @@
 
         <!--Row 1, column 2-->
         <androidx.cardview.widget.CardView
+            android:id="@+id/clearOp"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:layout_marginBottom="10dp"
+            android:layout_columnWeight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            app:cardElevation="8dp"
+            android:layout_marginBottom="10dp"
             app:cardCornerRadius="8dp"
-            >
+            app:cardElevation="8dp">
 
             <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="R1c1"
+                    android:text="CE"
                     android:textAlignment="center"
                     android:textSize="16sp">
 
@@ -100,28 +101,28 @@
 
         <!--Row 1, column 3-->
         <androidx.cardview.widget.CardView
+            android:id="@+id/plusMin"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:layout_marginBottom="10dp"
+            android:layout_columnWeight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            app:cardElevation="8dp"
+            android:layout_marginBottom="10dp"
             app:cardCornerRadius="8dp"
-            >
+            app:cardElevation="8dp">
 
             <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="R1c1"
+                    android:text="+/-"
                     android:textAlignment="center"
                     android:textSize="16sp">
 
@@ -133,28 +134,28 @@
 
         <!--Row 1, column 4-->
         <androidx.cardview.widget.CardView
+            android:id="@+id/div"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:layout_marginBottom="10dp"
+            android:layout_columnWeight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            app:cardElevation="8dp"
+            android:layout_marginBottom="10dp"
             app:cardCornerRadius="8dp"
-            >
+            app:cardElevation="8dp">
 
             <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="R1c1"
+                    android:text="/"
                     android:textAlignment="center"
                     android:textSize="16sp">
 
@@ -167,28 +168,28 @@
 
         <!--Row 2, column 1-->
         <androidx.cardview.widget.CardView
+            android:id="@+id/button7"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:layout_marginBottom="10dp"
+            android:layout_columnWeight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            app:cardElevation="8dp"
+            android:layout_marginBottom="10dp"
             app:cardCornerRadius="8dp"
-            >
+            app:cardElevation="8dp">
 
             <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="R1c1"
+                    android:text="7"
                     android:textAlignment="center"
                     android:textSize="16sp">
 
@@ -200,28 +201,28 @@
 
         <!--Row 2, column 2-->
         <androidx.cardview.widget.CardView
+            android:id="@+id/button8"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:layout_marginBottom="10dp"
+            android:layout_columnWeight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            app:cardElevation="8dp"
+            android:layout_marginBottom="10dp"
             app:cardCornerRadius="8dp"
-            >
+            app:cardElevation="8dp">
 
             <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="R1c1"
+                    android:text="8"
                     android:textAlignment="center"
                     android:textSize="16sp">
 
@@ -233,28 +234,28 @@
 
         <!--Row 2, column 3-->
         <androidx.cardview.widget.CardView
+            android:id="@+id/button9"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:layout_marginBottom="10dp"
+            android:layout_columnWeight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            app:cardElevation="8dp"
+            android:layout_marginBottom="10dp"
             app:cardCornerRadius="8dp"
-            >
+            app:cardElevation="8dp">
 
             <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="R1c1"
+                    android:text="9"
                     android:textAlignment="center"
                     android:textSize="16sp">
 
@@ -266,28 +267,28 @@
 
         <!--Row 2, column 4-->
         <androidx.cardview.widget.CardView
+            android:id="@+id/plus"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:layout_marginBottom="10dp"
+            android:layout_columnWeight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            app:cardElevation="8dp"
+            android:layout_marginBottom="10dp"
             app:cardCornerRadius="8dp"
-            >
+            app:cardElevation="8dp">
 
             <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="R1c1"
+                    android:text="+"
                     android:textAlignment="center"
                     android:textSize="16sp">
 
@@ -300,28 +301,28 @@
 
         <!--Row 3, column 1-->
         <androidx.cardview.widget.CardView
+            android:id="@+id/button4"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:layout_marginBottom="10dp"
+            android:layout_columnWeight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            app:cardElevation="8dp"
+            android:layout_marginBottom="10dp"
             app:cardCornerRadius="8dp"
-            >
+            app:cardElevation="8dp">
 
             <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="R1c1"
+                    android:text="4"
                     android:textAlignment="center"
                     android:textSize="16sp">
 
@@ -333,28 +334,28 @@
 
         <!--Row 3, column 2-->
         <androidx.cardview.widget.CardView
+            android:id="@+id/button5"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:layout_marginBottom="10dp"
+            android:layout_columnWeight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            app:cardElevation="8dp"
+            android:layout_marginBottom="10dp"
             app:cardCornerRadius="8dp"
-            >
+            app:cardElevation="8dp">
 
             <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="R1c1"
+                    android:text="5"
                     android:textAlignment="center"
                     android:textSize="16sp">
 
@@ -366,28 +367,28 @@
 
         <!--Row 3, column 3-->
         <androidx.cardview.widget.CardView
+            android:id="@+id/button6"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:layout_marginBottom="10dp"
+            android:layout_columnWeight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            app:cardElevation="8dp"
+            android:layout_marginBottom="10dp"
             app:cardCornerRadius="8dp"
-            >
+            app:cardElevation="8dp">
 
             <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="R1c1"
+                    android:text="6"
                     android:textAlignment="center"
                     android:textSize="16sp">
 
@@ -399,28 +400,28 @@
 
         <!--Row 3, column 4-->
         <androidx.cardview.widget.CardView
+            android:id="@+id/min"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:layout_marginBottom="10dp"
+            android:layout_columnWeight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            app:cardElevation="8dp"
+            android:layout_marginBottom="10dp"
             app:cardCornerRadius="8dp"
-            >
+            app:cardElevation="8dp">
 
             <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="R1c1"
+                    android:text="-"
                     android:textAlignment="center"
                     android:textSize="16sp">
 
@@ -433,28 +434,28 @@
 
         <!--Row 4, column 1-->
         <androidx.cardview.widget.CardView
+            android:id="@+id/button1"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:layout_marginBottom="10dp"
+            android:layout_columnWeight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            app:cardElevation="8dp"
+            android:layout_marginBottom="10dp"
             app:cardCornerRadius="8dp"
-            >
+            app:cardElevation="8dp">
 
             <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="R1c1"
+                    android:text="1"
                     android:textAlignment="center"
                     android:textSize="16sp">
 
@@ -466,28 +467,28 @@
 
         <!--Row 4, column 2-->
         <androidx.cardview.widget.CardView
+            android:id="@+id/button2"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:layout_marginBottom="10dp"
+            android:layout_columnWeight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            app:cardElevation="8dp"
+            android:layout_marginBottom="10dp"
             app:cardCornerRadius="8dp"
-            >
+            app:cardElevation="8dp">
 
             <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="R1c1"
+                    android:text="2"
                     android:textAlignment="center"
                     android:textSize="16sp">
 
@@ -499,28 +500,28 @@
 
         <!--Row 4, column 3-->
         <androidx.cardview.widget.CardView
+            android:id="@+id/button3"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:layout_marginBottom="10dp"
+            android:layout_columnWeight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            app:cardElevation="8dp"
+            android:layout_marginBottom="10dp"
             app:cardCornerRadius="8dp"
-            >
+            app:cardElevation="8dp">
 
             <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="R1c1"
+                    android:text="3"
                     android:textAlignment="center"
                     android:textSize="16sp">
 
@@ -532,28 +533,28 @@
 
         <!--Row 4, column 4-->
         <androidx.cardview.widget.CardView
+            android:id="@+id/mult"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:layout_marginBottom="10dp"
+            android:layout_columnWeight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            app:cardElevation="8dp"
+            android:layout_marginBottom="10dp"
             app:cardCornerRadius="8dp"
-            >
+            app:cardElevation="8dp">
 
             <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="R1c1"
+                    android:layout_height="match_parent"
+                    android:text="*"
                     android:textAlignment="center"
                     android:textSize="16sp">
 
@@ -566,28 +567,28 @@
         
         <!--Row 5, column 1-->
         <androidx.cardview.widget.CardView
+            android:id="@+id/button0"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:layout_marginBottom="10dp"
+            android:layout_columnWeight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            app:cardElevation="8dp"
+            android:layout_marginBottom="10dp"
             app:cardCornerRadius="8dp"
-            >
+            app:cardElevation="8dp">
 
             <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="R1c1"
+                    android:text="0"
                     android:textAlignment="center"
                     android:textSize="16sp">
 
@@ -599,28 +600,29 @@
 
         <!--Row 5, column 2-->
         <androidx.cardview.widget.CardView
+            android:id="@+id/decimal"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:layout_marginBottom="10dp"
+            android:layout_columnWeight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            app:cardElevation="8dp"
+            android:layout_marginBottom="10dp"
             app:cardCornerRadius="8dp"
-            >
+            app:cardElevation="8dp">
 
             <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/dec"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="R1c1"
+                    android:text="."
                     android:textAlignment="center"
                     android:textSize="16sp">
 
@@ -632,28 +634,28 @@
 
         <!--Row 5, column 3-->
         <androidx.cardview.widget.CardView
+            android:id="@+id/equals"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:layout_marginBottom="10dp"
+            android:layout_columnWeight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            app:cardElevation="8dp"
+            android:layout_marginBottom="10dp"
             app:cardCornerRadius="8dp"
-            >
+            app:cardElevation="8dp">
 
             <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="R1c1"
+                    android:text="="
                     android:textAlignment="center"
                     android:textSize="16sp">
 
@@ -663,38 +665,7 @@
 
         </androidx.cardview.widget.CardView>
 
-        <!--Row 5, column 4-->
-        <androidx.cardview.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            app:cardElevation="8dp"
-            app:cardCornerRadius="8dp"
-            >
 
-            <LinearLayout
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="R1c1"
-                    android:textAlignment="center"
-                    android:textSize="16sp">
-
-                </TextView>
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
 
 
 
