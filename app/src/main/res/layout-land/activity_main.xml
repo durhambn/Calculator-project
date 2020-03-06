@@ -333,7 +333,7 @@
 
         <!--Row 2, column 5-->
         <androidx.cardview.widget.CardView
-
+            android:id="@+id/sqroot"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
@@ -354,7 +354,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="?"
+                    android:text="√X"
                     android:textAlignment="center"
                     android:textSize="10sp">
 
@@ -499,7 +499,7 @@
 
         <!--Row 4, column 5-->
         <androidx.cardview.widget.CardView
-
+            android:id="@+id/third"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
@@ -520,7 +520,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="?"
+                    android:text="X^3"
                     android:textAlignment="center"
                     android:textSize="10sp">
 
@@ -665,7 +665,7 @@
 
         <!--Row 4, column 5-->
         <androidx.cardview.widget.CardView
-
+            android:id="@+id/ten"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
@@ -686,7 +686,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="?"
+                    android:text="10^X"
                     android:textAlignment="center"
                     android:textSize="10sp">
 

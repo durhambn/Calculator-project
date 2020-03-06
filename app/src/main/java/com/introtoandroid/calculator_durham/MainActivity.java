@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     CardView button0, button1, button2, button3, button4, button5, button6, button7, button8,
             button9, equals, decimal, plus, minus, divide, multiply, clear, clearAll, plusMinus,
-            buttonSqr;
+            buttonSqr, buttonRoot, buttonThird, buttonTen;
 
     TextView calcView;
 
@@ -49,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
         clearAll = (CardView) findViewById(R.id.clearOp);
         plusMinus = (CardView) findViewById(R.id.plusMin);
         buttonSqr = (CardView) findViewById(R.id.sqr);
+        buttonRoot = (CardView) findViewById(R.id.sqroot);
+        buttonThird = (CardView) findViewById(R.id.third);
+        buttonTen = (CardView) findViewById(R.id.ten);
 
         calcView = (TextView) findViewById(R.id.viewCalc);
 
@@ -261,6 +264,36 @@ public class MainActivity extends AppCompatActivity {
                     Float temp = Float.parseFloat(calcView.getText().toString());
                     operation = "sqr";
                     temp = temp * temp;
+                    calcView.setText(temp.toString());
+                }
+            });
+
+            buttonRoot.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Double temp = Double.parseDouble(calcView.getText().toString());
+                    operation = "root";
+                    temp = Math.sqrt(temp);
+                    calcView.setText(temp.toString());
+                }
+            });
+
+            buttonThird.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Float temp = Float.parseFloat(calcView.getText().toString());
+                    operation = "third";
+                    temp = temp * temp * temp;
+                    calcView.setText(temp.toString());
+                }
+            });
+
+            buttonTen.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Double temp = Double.parseDouble(calcView.getText().toString());
+                    operation = "ten";
+                    temp = Math.pow(10, temp);
                     calcView.setText(temp.toString());
                 }
             });
