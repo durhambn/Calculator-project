@@ -3,6 +3,7 @@ package com.introtoandroid.calculator_durham;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,7 +14,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     CardView button0, button1, button2, button3, button4, button5, button6, button7, button8,
-            button9, equals, decimal, plus, minus, divide, multiply, clear, clearAll, plusMinus;
+            button9, equals, decimal, plus, minus, divide, multiply, clear, clearAll, plusMinus,
+            buttonSqr;
 
     TextView calcView;
 
@@ -46,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         clear = (CardView) findViewById(R.id.clear);
         clearAll = (CardView) findViewById(R.id.clearOp);
         plusMinus = (CardView) findViewById(R.id.plusMin);
+        buttonSqr = (CardView) findViewById(R.id.sqr);
 
         calcView = (TextView) findViewById(R.id.viewCalc);
 
@@ -122,51 +125,45 @@ public class MainActivity extends AppCompatActivity {
         equals.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!calcView.getText().toString().equals("")) {
+                if (!calcView.getText().toString().equals("")) {
                     valueTwo = Float.parseFloat(calcView.getText().toString());
                 }
-                if(operation == null){
+                if (operation == null) {
                     //do nothing
-                }
-
-                else if(operation.equals("plus") && valueTwo != null){
+                } else if (operation.equals("plus") && valueTwo != null) {
 
                     valueOne += valueTwo;
-                    calcView.setText(valueOne.toString() );
-                    operation=null;
-                    valueOne=null;
-                    valueTwo=null;
-                }
-                else if(operation.equals("minus") && valueTwo != null){
+                    calcView.setText(valueOne.toString());
+                    operation = null;
+                    valueOne = null;
+                    valueTwo = null;
+                } else if (operation.equals("minus") && valueTwo != null) {
 
                     valueOne -= valueTwo;
                     calcView.setText(valueOne.toString());
-                    operation=null;
-                    valueOne=null;
-                    valueTwo=null;
-                }
-                else if(operation.equals("divide") && valueTwo != null){
+                    operation = null;
+                    valueOne = null;
+                    valueTwo = null;
+                } else if (operation.equals("divide") && valueTwo != null) {
 
-                    valueOne = valueOne/valueTwo;
+                    valueOne = valueOne / valueTwo;
                     calcView.setText(valueOne.toString());
-                    operation=null;
-                    valueOne=null;
-                    valueTwo=null;
-                }
-                else if(operation.equals("multiply") && valueTwo != null){
+                    operation = null;
+                    valueOne = null;
+                    valueTwo = null;
+                } else if (operation.equals("multiply") && valueTwo != null) {
 
                     valueOne = valueOne * valueTwo;
                     calcView.setText(valueOne.toString());
-                    operation=null;
-                    valueOne=null;
-                    valueTwo=null;
-                }
-                else{
+                    operation = null;
+                    valueOne = null;
+                    valueTwo = null;
+                } else {
                     //case: user puts in number then presses = without operation
-                        //should do nothing --> moved to first case statement
+                    //should do nothing --> moved to first case statement
                     //case: user puts in number and operation with out second number
-                        //apple makes valuetwo equal to valueOne and does the operation
-                        //I think you should prompt for another number
+                    //apple makes valuetwo equal to valueOne and does the operation
+                    //I think you should prompt for another number
                     Toast t = Toast.makeText(getApplicationContext(), "Enter Another Number", Toast.LENGTH_LONG);
                     t.show();
                 }
@@ -184,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
         plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!calcView.getText().toString().equals("")) {
+                if (!calcView.getText().toString().equals("")) {
                     operation = "plus";
                     valueOne = Float.parseFloat(calcView.getText().toString());
                     calcView.setText(null);
@@ -197,7 +194,7 @@ public class MainActivity extends AppCompatActivity {
         minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!calcView.getText().toString().equals("")) {
+                if (!calcView.getText().toString().equals("")) {
                     operation = "minus";
                     valueOne = Float.parseFloat(calcView.getText().toString());
                     calcView.setText(null);
@@ -209,7 +206,7 @@ public class MainActivity extends AppCompatActivity {
         divide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!calcView.getText().toString().equals("")) {
+                if (!calcView.getText().toString().equals("")) {
                     operation = "divide";
                     valueOne = Float.parseFloat(calcView.getText().toString());
                     calcView.setText(null);
@@ -221,7 +218,7 @@ public class MainActivity extends AppCompatActivity {
         multiply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!calcView.getText().toString().equals("")) {
+                if (!calcView.getText().toString().equals("")) {
                     operation = "multiply";
                     valueOne = Float.parseFloat(calcView.getText().toString());
                     calcView.setText(null);
@@ -254,6 +251,47 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        int orientation = getResources().getConfiguration().orientation;
+        if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            // In landscape
+
+            buttonSqr.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Float temp = Float.parseFloat(calcView.getText().toString());
+                    operation = "sqr";
+                    temp = temp * temp;
+                    calcView.setText(temp.toString());
+                }
+            });
+        }
+
+
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outstate) {
+        super.onSaveInstanceState(outstate);
+        String viewStr = calcView.getText().toString();
+        Float val = valueOne;
+        String op = operation;
+        outstate.putString("op", op);
+        outstate.putString("view", viewStr);
+        if(val != null) {
+            outstate.putFloat("valOne", val);
+        }
+
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstance) {
+        super.onRestoreInstanceState(savedInstance);
+        String viewStr = savedInstance.getString("view");
+        Float val = savedInstance.getFloat("valOne");
+        String op = savedInstance.getString("op");
+        operation = op;
+        calcView.setText(viewStr);
+        valueOne = val;
 
     }
 }
